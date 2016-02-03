@@ -1,0 +1,169 @@
+
+* {  
+  vertical-align: baseline;  
+  border: none;  
+  padding: 0;  
+  margin: 0;  
+  }  
+body {  
+ 
+  }  
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {  
+
+  }  
+li, dd, blockquote {  
+
+  }  
+table {  
+  border-collapse: collapse;  
+  border-spacing: 0;  
+  } 
+
+  
+html{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+  max-height: 5000em;
+}  
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}  
+  
+
+body {
+	width:960px;
+	margin:0 auto;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    word-wrap: break-word;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.22),0px 0px 10px rgba(0,0,0,0.22);
+
+    background-color: transparent;
+}
+
+
+
+header .header_contacts {
+	height:17px;
+	text-align:right;
+	padding:7px 5px;
+}
+
+header .header_center {
+	height:168px;
+	background:url(../images/head.jpg);	
+}
+
+header .nav>ul {
+        width: 100%;
+        margin: 0;
+        /*padding: 10px 0 0 0;*/
+        list-style: none;
+        background:#0071BC;
+
+}
+
+header .nav>ul:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+
+header .nav>ul>li {
+	list-style:none;
+	float:left;
+	position:relative;
+	margin:0;
+	padding:5px 37px;
+	background:#0071BC;
+	color:#fff;
+	cursor:pointer;
+}
+
+header .nav>ul>li a {
+	color:inherit;
+	text-decoration:none;
+	font-size:14px;
+}
+
+header .nav>ul>li:hover, header .nav>ul>li.active {
+	background:#B87207;
+}
+
+header .nav>ul>li>ul {
+	position:absolute;
+	background:#fff;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	display:block;
+	top: 27px;
+	color:#000;
+	list-style:none;
+	display:none;
+	width: 100%;
+    left: -1px;
+}
+
+header .nav>ul>li:hover>ul {
+	display:block;
+}
+
+
+header .nav>ul>li>ul>li {
+	border-bottom:1px solid #ccc;
+	padding:5px 15px;
+}
+
+header .nav>ul>li>ul>li:hover {
+	color:#aaa;
+}
+
+
+
+header .breadcrumbs {
+    color: #7F7F7F;
+    line-height: 12px;
+    text-align: right;
+    font-size: 10px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+}
+
+main .content {
+	width:70%;
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+    box-sizing: border-box; /* Для IE и Opera */	
+	float:left;
+	padding:3px 5px 5px 5px;
+}
+
+main .sidebar {
+	width:30%;
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+    box-sizing: border-box; /* Для IE и Opera */	
+	float:left;
+	padding:3px 4px 5px 40px;
+}
+
+
+
+
+
