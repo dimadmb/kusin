@@ -9,7 +9,7 @@ body {
  
   }  
 h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {  
-
+	font-weight:400;
   }  
 li, dd, blockquote {  
 
@@ -19,6 +19,9 @@ table {
   border-spacing: 0;  
   } 
 
+  p {
+	  margin:10px  0 10px ;
+  }
   
 html{
   -ms-text-size-adjust: 100%;
@@ -62,8 +65,57 @@ header .header_contacts {
 
 header .header_center {
 	height:168px;
-	background:url(../images/head.jpg);	
+	background:url(../images/head.jpg);
+	position:relative;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
 }
+
+header .header_center .header_center_gerb{
+	position:absolute;
+	left:17px;
+	top:38px;
+}
+
+header .header_center .header_center_edro{
+	position:absolute;
+	left:425px;
+	top:47px;
+}
+
+header .header_center .header_center_info1{
+	position:absolute;
+    top: 51px;
+    left: 492px;
+	text-align: right;	
+}
+
+header .header_center .header_center_info2{
+	position:absolute;
+    top: 144px;
+    left: 111px;	
+}
+
+header .header_center .header_center_kuzin {
+	position:absolute;
+    left: 108px;
+    top: 64px;
+	text-align: center;
+}
+
+header .header_center .header_center_kuzin  .header_center_kuzin_span1{
+	font-size: 22px;
+    line-height: 26px;
+    padding-top: 11px;
+    color: #B87207;
+	
+}
+
+header .header_center .header_center_kuzin .header_center_kuzin_span2{
+	font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
 
 header .nav>ul {
         width: 100%;
@@ -145,13 +197,28 @@ header .breadcrumbs {
 	border-bottom:1px solid #ccc;
 }
 
+
+main {
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+}
+
+main h1 {
+	font-size: 26px;
+    line-height: 40px;
+}
+main h2 {
+	font-size: 22px;
+    line-height: 32px;
+}
+
+
 main .content {
 	width:70%;
     -moz-box-sizing: border-box; /* Äëÿ Firefox */
     -webkit-box-sizing: border-box; /* Äëÿ Safari è Chrome */
     box-sizing: border-box; /* Äëÿ IE è Opera */	
 	float:left;
-	padding:3px 5px 5px 5px;
+	padding:3px 5px 5px 10px;
 }
 
 main .sidebar {
@@ -163,7 +230,22 @@ main .sidebar {
 	padding:3px 4px 5px 40px;
 }
 
+main .sidebar .sidebar_parlament_portal{
+	padding:8px 0;
+}
+main .sidebar .sidebar_parlament_portal a{
+	border-width: 1px;
+    border-style: solid;
+    border-color: #41536B;
+    background-color: transparent;
+	display:block;
+	line-height: 0;
+	width: 243px;
+}
 
+main .sidebar  p {
+	margin:0 0 10px;
+}
 
 
 

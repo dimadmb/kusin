@@ -17,11 +17,30 @@
         Тел.: (495) 692-45-01, факс: (495) 692-92-32, E-mail: deputat@kuzinsp.ru
       </div>
 	  <div class="header_center">
+		<a href="{{ path('homepage') }}">
+			<img class="header_center_gerb" src="{{asset('images/icon.png')}}" alt="">
+		</a>
+		<div class="header_center_kuzin">
+			<span class="header_center_kuzin_span1">КУЗИН СЕРГЕЙ ПАВЛОВИЧ</span><br>
+			<span class="header_center_kuzin_span2">ДЕПУТАТ ГОСУДАРСТВЕННОЙ ДУМЫ</span>
+		</div>
+		<div class="header_center_edro">
+			<img src="{{asset('images/edro.png')}}" alt="">
+		</div>
+		<div class="header_center_info1">
+			<span>Избран по московскому списку</span><br>
+			<span>партии "Единая Россия"</span><br>
+			<span>Работает в Северо-Восточном</span><br>
+			<span>округе города Москвы</span>
+		</div>
+		<div class="header_center_info2">
+			Член Комитета по делам СНГ,  Евразийской  интеграции  и  связям  с соотечественниками
+		</div>
 	  </div>
 	  <div class="nav">
 		<ul>
-			<li><a href="#">Главная</a></li>
-			<li><a href="#">Биография</a></li>
+			<li><a href="{{ path('homepage') }}">Главная</a></li>
+			<li><a href="{{ path('page',{'first':'biografiya'}) }}">Биография</a></li>
 			<li><a href="#">Приёмная Депутата</a></li>
 			<li><a href="#">Работа Депутата</a>
 				<ul>
@@ -30,7 +49,7 @@
 					<li><a href="">item 3 </a></li>
 				</ul>
 			</li>
-			<li><a href="#">Новости</a></li>
+			<li><a href="{{ path('news') }}">Новости</a></li>
 			<li><a href="#">Декларации</a></li>
 		</ul>
 	  </div>
@@ -46,7 +65,16 @@
 			
       </div>
 	  <div class="sidebar">
-			сайдбар
+			
+			<div class="sidebar_kuzin_sp">
+				<img src="{{asset('images/kuzin_sp.jpg')}}" alt="">
+			</div>
+			<div class="sidebar_parlament_portal">
+				<a href="http://portal.parliament.gov.ru/u/?id=1019" target="_blank"><img src="{{asset('images/parlament-portal.jpg')}}" alt=""></a>
+			</div>
+			
+			{{ render(controller('BaseBundle:News:listNews'))}}
+			
 	  </div>
     </main>
     <footer>

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block body %}
+
+{% for new in news %}
+	<h2>{{ new.title }}</h2>
+	<p>{{ new.anounce }}</p>
+{% endfor %}
+	
+{% endblock %}
