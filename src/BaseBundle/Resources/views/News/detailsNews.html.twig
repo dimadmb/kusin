@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{new.title}}{% endblock %}
+
+{% block body %}
+
+<h1>{{new.title}}<span style="float: right; font-size:14px; color:#aaa;">{{new.date | date("d.m.y")}}</span></h1>
+
+{{new.text | raw}}
+	
+{% endblock %}

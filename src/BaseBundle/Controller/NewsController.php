@@ -32,6 +32,20 @@ class NewsController extends Controller
 		
 		return array('news' => $news);		
 	}
+		
+
+	 /**
+     * @Route("/news/{id}", name="news_details")	 
+     * @Template()
+     */	
+	public function detailsNewsAction($id)
+	{
+        $repository = $this->getDoctrine()->getRepository("BaseBundle:News");
+		$new = $repository->findOneById($id);        
+		
+		return array('new' => $new);		
+	}
+	
 	
 	
 }

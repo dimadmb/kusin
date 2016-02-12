@@ -247,5 +247,61 @@ main .sidebar  p {
 	margin:0 0 10px;
 }
 
+main .sidebar .sidebar_social .fa-facebook {
+	color:#3A5795;
+}
 
+main .sidebar .sidebar_social .fa-twitter {
+	color:#9AE4E8;
+}
+main .sidebar .sidebar_social .fa-vk {
+	color:#45668E;
+}
 
+main .sidebar .sidebar_social a{
+	display:block;
+	margin:10px 22px;
+	float:left;
+}
+
+main .sidebar .newslist {
+	border:1px solid #0071BC;
+}
+
+main .sidebar .newslist .newslist_head {
+	background:#0071BC;
+	color:#fff;
+	padding:3px 6px;
+}
+
+main .sidebar .newslist .newslist_head  a {
+	float:right;
+	color:#00FFFF;
+}
+
+main .sidebar .newslist .newslist_body {
+	padding:10px 5px 5px
+}
+
+main .sidebar .newslist .newslist_body span.date {
+	float:left;
+	text-indent: 5px;
+    color: #7F7F7F;
+    line-height: 14px;
+    font-size: 12px;
+    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;	
+}
+main .sidebar .newslist .newslist_body span.anounce {
+	float:left;
+	margin-left:5px;
+	font-size: 12px;
+    line-height: 14px;
+    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	width:175px;
+}
+
+main .sidebar .newslist .newslist_body span.anounce h4 {
+}
+main .sidebar .newslist .newslist_body span.anounce p {
+	color: #7F7F7F;
+}

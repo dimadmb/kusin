@@ -1,4 +1,22 @@
-{% for new in news %}
-	<h4>{{ new.title }}</h4>
-	<p>{{ new.anounce }}</p>
-{% endfor %}
+<div class="newslist">
+	<div class="newslist_head">
+	<span>НОВОСТИ</span> <a href="{{path('news')}}">показать все</a>
+	</div>
+	<div class="newslist_body">
+		{% for new in news %}
+			<div class="clearfix">
+				<span class="date">
+					{{ new.date | date("d.m.y") }}
+				</span>
+				<span class="anounce">
+					<h4>{{ new.title }}</h4>
+					<p>{{ new.anounce | raw }}</p>			
+				</span>			
+			</div>
+
+
+		{% endfor %}	
+	</div>
+	
+</div>
+
