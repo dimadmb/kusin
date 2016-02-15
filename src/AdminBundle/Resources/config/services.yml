@@ -1,0 +1,17 @@
+services:
+   admin.admin.news:
+       class: AdminBundle\Admin\NewsAdmin
+       tags:
+           - { name: sonata.admin, manager_type: orm, group: admin, label: "Новости" }
+       arguments:
+           - ~
+           - BaseBundle\Entity\News
+           - 'AdminBundle:NewsAdmin'
+   admin.admin.pages:
+       class: AdminBundle\Admin\PageAdmin
+       tags:
+           - { name: sonata.admin, manager_type: orm, group: admin, label: "Страницы" }
+       arguments:
+           - ~
+           - BaseBundle\Entity\Page
+           - 'AdminBundle:PageAdmin'

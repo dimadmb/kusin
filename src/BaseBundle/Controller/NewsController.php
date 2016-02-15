@@ -9,15 +9,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class NewsController extends Controller
 {
 	 /**
-     * @Route("/news", name="news")
+
      * @Template()
      */
     public function indexAction()
     {
-        /*$repository = $this->getDoctrine()->getRepository("BaseBundle:News");
-		$news = $repository->findAll();        
-		
-		return array('news' => $news);*/
 		return $this->listNewsAction();
     }
 	
@@ -25,10 +21,10 @@ class NewsController extends Controller
 	 /**
      * @Template()
      */	
-	public function listNewsAction()
+	public function listNewsAction($limit = null)
 	{
         $repository = $this->getDoctrine()->getRepository("BaseBundle:News");
-		$news = $repository->findAll();        
+		$news = $repository->findBy(array(),array('date' => 'DESC'),$limit);        
 		
 		return array('news' => $news);		
 	}

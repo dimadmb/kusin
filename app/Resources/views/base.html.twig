@@ -53,6 +53,9 @@
 			<li><a href="{{ path('news') }}">Новости</a></li>
 			<li><a href="#">Декларации</a></li>
 		</ul>
+		
+		{{ render(controller("BaseBundle:Menu:getMenu")) }}
+		
 	  </div>
 	  <div class="breadcrumbs">
 		<p>Главная > Хлебные крошки</p>
@@ -83,7 +86,7 @@
 			
 			</div>
 			
-			{{ render(controller('BaseBundle:News:listNews'))}}
+			{{ render(controller('BaseBundle:News:listNews',{'limit':6}))}}
 			
 	  </div>
     </main>

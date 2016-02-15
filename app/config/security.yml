@@ -1,9 +1,8 @@
 security:
 
     providers:
-        in_memory:
-            memory: ~
-
+        main:
+            entity: { class: BaseBundle:User, property: username }
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
@@ -11,3 +10,20 @@ security:
 
         main:
             anonymous: ~
+            form_login:
+                check_path: _security_check
+                login_path: _security_login
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    encoders:
+        BaseBundle\Entity\User:
+            algorithm: sha512
+            encode-as-base64: true
+            iterations: 10
+
+security:
+   role_hierarchy:
+       ROLE_ADMIN:       [ROLE_USER, ROLE_SONATA_ADMIN]
+       ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+

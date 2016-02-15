@@ -9,7 +9,7 @@
 					{{ new.date | date("d.m.y") }}
 				</span>
 				<span class="anounce">
-					<h4>{{ new.title }}</h4>
+					<a  href="{{ path('news_details',{id:new.id}) }}"><h4>{{ new.title }}</h4></a>
 					<p>{{ new.anounce | raw }}</p>			
 				</span>			
 			</div>

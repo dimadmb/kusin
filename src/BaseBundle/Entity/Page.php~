@@ -53,14 +53,14 @@ class Page
     /**
      * @var integer
      *
-     * @ORM\Column(name="parent_id", type="integer" , nullable=true )
+     * @ORM\Column(name="parent_id", type="integer")
      */
     private $parentId;
 
 	/**
      * @var integer
      *
-     * @ORM\Column(name="sort", type="integer")
+     * @ORM\Column(name="sort", type="integer", nullable=true)
 	*/
 	private $sort;
 
@@ -213,7 +213,4 @@ class Page
     {
         return $this->titleMenu;
     }
-	
-
-	
 }

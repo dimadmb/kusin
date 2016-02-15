@@ -1,6 +1,28 @@
+_security_login:
+    pattern:  /login
+    defaults: { _controller: BaseBundle:Security:login }
+
+_security_check:
+    pattern:  /login_check
+
+_security_logout:
+    pattern:  /logout
+
+news:
+    pattern:  /news.html
+    defaults: { _controller: BaseBundle:News:index }	
+
+admin:
+   resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+   prefix: /admin
+
+_sonata_admin:
+   resource: .
+   type: sonata_admin
+   prefix: /admin
+
 base:
     resource: "@BaseBundle/Controller/"
     type:     annotation
     prefix:   /
-
 

@@ -1,0 +1,7 @@
+<ul>
+{% for page in pages  %}
+
+			<li><a href="{{ path('page',{'first':page.url}) }}">{{page.titleMenu}}</a></li>
+			
+{% endfor %}
+</ul>

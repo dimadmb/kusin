@@ -5,9 +5,12 @@
 {% block body %}
 
 {% for new in news %}
-	<a href="{{ path('news_details',{id:new.id}) }}"><h2>{{ new.title }}<span style="float: right; font-size:14px; color:#aaa;">{{new.date | date("d.m.y")}}</span></h2></a>
-	
-	<p>{{ new.anounce | raw }}</p>
+	<div class="newslist">
+		<a class="" href="{{ path('news_details',{id:new.id}) }}"><h2>{{ new.title }}<span style="float: right; font-size:14px; color:#aaa;">{{new.date | date("d.m.y")}}</span></h2></a>
+		
+		<p>{{ new.anounce | raw }}</p>
+	</div>	
+
 {% endfor %}
 	
 {% endblock %}
