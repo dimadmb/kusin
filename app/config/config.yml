@@ -7,6 +7,8 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: ru
+    upload_img_root_directory: %kernel.root_dir%/../web/upload/img
+    upload_img_directory: upload/img
 
 framework:
     #esi:             ~
@@ -81,7 +83,10 @@ swiftmailer:
 
 
 sonata_admin:
-   title: Админка
+    title: Админка
+    templates:
+        layout:  AdminBundle:Admin:sonata_admin_base_layout.html.twig
+    #    layout:  SonataAdminBundle::standard_layout.html.twig
 
 sonata_block:
    default_contexts: [cms]

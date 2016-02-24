@@ -48,7 +48,22 @@ class News
      * @ORM\Column(name="anounce", type="text")
      */
     private $anounce;
-
+	
+	// добавить категорию 
+	
+	/**
+	* @ORM\ManyToOne(targetEntity="Category", inversedBy="news")
+    * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+	*/
+	private $category;
+	
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img", type="string", length=255)
+     */	
+	private $img;
 
     /**
      * Get id
@@ -153,4 +168,50 @@ class News
     }
 
 
+
+    /**
+     * Set category
+     *
+     * @param \BaseBundle\Entity\Category $category
+     * @return News
+     */
+    public function setCategory(\BaseBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \BaseBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Set img
+     *
+     * @param string $img
+     * @return News
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+
+        return $this;
+    }
+
+    /**
+     * Get img
+     *
+     * @return string 
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
 }

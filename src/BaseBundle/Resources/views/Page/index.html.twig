@@ -4,6 +4,21 @@
 
 {% block body %}
 
+{% block script %}
+	<!-- Run the plugin -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('#slider').orbit({
+				'bullets': true,
+				'timer' : true,
+				'animation' : 'horizontal-slide'
+			});
+		});
+	</script>
+{% endblock %}
+
+{{ render(controller('BaseBundle:Slider:getSlides'))}}
+
 	{{page.body | raw }}
 	
 {% endblock %}

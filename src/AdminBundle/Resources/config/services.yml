@@ -1,4 +1,12 @@
 services:
+   admin.admin.category:
+       class: AdminBundle\Admin\CategoryAdmin
+       tags:
+           - { name: sonata.admin, manager_type: orm, group: admin, label: "Рубрики" }
+       arguments:
+           - ~
+           - BaseBundle\Entity\Category
+           - 'AdminBundle:CategoryAdmin'
    admin.admin.news:
        class: AdminBundle\Admin\NewsAdmin
        tags:
@@ -15,3 +23,5 @@ services:
            - ~
            - BaseBundle\Entity\Page
            - 'AdminBundle:PageAdmin'
+
+

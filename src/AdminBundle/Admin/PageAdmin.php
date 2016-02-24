@@ -25,7 +25,7 @@ class PageAdmin extends Admin
 		$formMapper
             ->add('title', null, array('label' => 'Заголовок'))
             ->add('titleMenu', null, array('label' => 'Заголовок в меню'))
-            ->add('body','textarea', array('label' => 'Текст страницы','required'=>false,'attr' => array('class' => 'tinymce', 'tinymce'=>'{"theme":"simple"}')))
+            ->add('body','textarea', array('label' => 'Текст страницы','required'=>false,'attr' => array('class' => 'tinymce', )))
             ->add('url', null , array('label' => 'Адрес страницы'))
             ->add('parentId', 'entity' , array(
 						'label' => 'Родитель',
